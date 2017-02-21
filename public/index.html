@@ -20,9 +20,27 @@
             <div class="form-group">
                 <input ng-model="topic" class="form-control" id="inputdefault" type="text" placeholder="subreddits">
                 <button ng-click="searchTopic(topic)"class="btn btn-default btn-block search-button">Search</button>
-
             </div>
         </form>
+        <div ng-if = "suggestions.length" class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong>Please try a valid subreddit name!!</strong>
+        </div>
+        <div ng-if = "suggestions.length" class="list-group">
+            <a href = "#" class = "list-group-item active">
+                <h4 class = "list-group-item-heading">
+                    Suggestions
+                </h4>
+            </a>
+            <a ng-repeat="topic_name in suggestions track by $index" ng-click="searchTopic(topic_name)" class="list-group-item">
+                <span class="badge" ng-if="item.children > 0">></span>
+                <div>{{topic_name}}</div>
+            </a>
+        </div>
+        <div ng-if = "error" class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong>Please try a valid subreddit name!!</strong>
+        </div>
         <div class="list-group">
             <a href = "#" class = "list-group-item active">
                 <h4 class = "list-group-item-heading">
@@ -39,8 +57,6 @@
                     <span class="glyphicon glyphicon-thumbs-up ups"></span> {{record.ups}}
                     <span class="glyphicon glyphicon-comment comments"></span> {{record.num_comments}}
                 </div>
-
-
             </a>
 
             </div>

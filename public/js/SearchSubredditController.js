@@ -12,24 +12,24 @@
 
     function SearchSubredditController($scope,$http,$sce) {
 
-
-
-
         //$scope.url = "https://www.reddit.com/search.rss?q=cats&sort=new&restrict_sr=&t=all"
 
         $scope.searchTopic = function(subreddit){
 
             var searchSubreddit = subreddit;
             $scope.url = "https://www.reddit.com/r/"+searchSubreddit+"/top/.json?limit=10&after=t3_10omtd/"; //reddit search url
-
+            $scope.suggestions = [];
             //console.log($scope.url);
 
             $scope.myData = []; //array to hold all posts from reddit api
             $scope.topic = subreddit;
+            $scope.error = '';
+
+
             $http.get($scope.url)
                 .then(function successCallback(response) {
                 console.log(response.data);
-                if(response.data){
+                if(response.data.data.children.length){
                     for (s in response.data.data.children){
                         //console.log(response.data.data.children[s].data.title);
                         var record = response.data.data.children[s].data;
@@ -57,6 +57,12 @@
                                     'num_comments':record.num_comments,
                                     'img_url':$sce.trustAsResourceUrl(record.thumbnail),
                                 };
+
+                                var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
+                                var regex = new RegExp(expression);
+                                if (!record.thumbnail.match(regex)) {
+                                    record_data['img_url'] = 'http://vignette3.wikia.nocookie.net/agario/images/1/10/Reddit.png/revision/latest?cb=20150623160034';
+                                }
                                 var found = default_strings.includes(record.thumbnail);
                                 if(found){
                                     record_data['img_url'] = 'http://vignette3.wikia.nocookie.net/agario/images/1/10/Reddit.png/revision/latest?cb=20150623160034';
@@ -96,8 +102,8 @@
                     }
                 }
                 else{
-                    console.log("Error!!!");
-
+                    console.log("Please try a tangible subreddit");
+                    $scope.error="Please try a tangible subreddit";
                 }
 
             },
@@ -110,10 +116,14 @@
 
                             //$scope.myData = response.data;
                             for (s in response.data.data.children){
-                                console.log(response.data.data.children[s].data.title);
+                                //console.log(response.data.data.children[s].data.title);
                                 var record = response.data.data.children[s].data;
                                 console.log(record.subreddit);
-
+                                $scope.suggestions.push(record.subreddit);
+                            }
+                            console.log($scope.suggestions);
+                            if(!$scope.suggestions.length){
+                                $scope.error="Please try a tangible subreddit";
                             }
 
                         });

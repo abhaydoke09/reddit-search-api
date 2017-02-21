@@ -10,8 +10,6 @@ angular.module("cisco-reddit-search-app",[])
 function SearchController($scope,$http,$sce) {
 
 
-
-
     //$scope.url = "https://www.reddit.com/search.rss?q=cats&sort=new&restrict_sr=&t=all"
 
     $scope.searchTopic = function(topic){
