@@ -12,12 +12,13 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="css/style.css" rel="stylesheet">
     <script src="js/SearchController.js"></script>
+    <script src="js/SearchSubredditController.js"></script>
 </head>
 <body>
-    <div ng-controller="SearchController" id="reddit-content" class="container">
+    <div ng-controller="SearchSubredditController" id="reddit-content" class="container">
         <form class="input-form">
             <div class="form-group">
-                <input ng-model="topic" class="form-control" id="inputdefault" type="text" placeholder="Enter Topic">
+                <input ng-model="topic" class="form-control" id="inputdefault" type="text" placeholder="/r/">
                 <button ng-click="searchTopic(topic)"class="btn btn-default btn-block search-button">Search</button>
 
             </div>
@@ -32,10 +33,16 @@
             <a href="{{record.url}}" target="_blank" class="list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-between">
                     <h3 class="mb-1">{{record.title}}</h3>
-                    <p class="mb-1">{{record.text.substr(0, 300)+'.....'}}</small>
+                    <img src="{{record.img_url}}" class="img-circle" alt="{{record.title}}" width="70" height="70">
+                    <p class="mb-1">{{record.text.substr(0, 300)+'.....'}}</p>
                     <p><small>Created: {{record.date_created}}</small></p>
+                    <span class="glyphicon glyphicon-thumbs-up ups"></span> {{record.ups}}
+                    <span class="glyphicon glyphicon-comment comments"></span> {{record.num_comments}}
                 </div>
+
+
             </a>
+
             </div>
         </div>
 

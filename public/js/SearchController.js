@@ -43,7 +43,9 @@ function SearchController($scope,$http,$sce) {
                     'text':record.selftext,
                     'html':$sce.trustAsHtml(record.selftext_html),
                     'date_created':date_created.toDateString(),
-                    'last_edited':date_edited.toDateString()
+                    'last_edited':date_edited.toDateString(),
+                    'ups':record.ups,
+                    'num_comments':record.num_comments
                 };
                 $scope.myData.push(record);
             }
@@ -60,4 +62,6 @@ function SearchController($scope,$http,$sce) {
 
     }
 })();
+
+
 
