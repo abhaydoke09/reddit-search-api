@@ -124,6 +124,7 @@
                             }
                             console.log($scope.suggestions);
                             if(!$scope.suggestions.length){
+                                $scope.suggestions = ['AskReddit','WTF','aww','creepy','gaming','crazyideas'];
                                 $scope.error="Please try a tangible subreddit";
                             }
 
