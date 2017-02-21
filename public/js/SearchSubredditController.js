@@ -104,6 +104,7 @@
                 else{
                     console.log("Please try a tangible subreddit");
                     $scope.error="Please try a tangible subreddit";
+                    $scope.suggestions = ['AskReddit','WTF','aww','creepy','gaming','crazyideas'];
                 }
 
             },

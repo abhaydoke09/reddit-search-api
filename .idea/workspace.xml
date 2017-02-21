@@ -30,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="28" column="42" lean-forward="false" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+            <state relative-caret-position="510">
+              <caret line="41" column="64" lean-forward="true" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -52,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchSubredditController.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SearchSubredditController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/SearchSubredditController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="62" column="53" lean-forward="false" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
+            <state relative-caret-position="406">
+              <caret line="106" column="95" lean-forward="false" selection-start-line="106" selection-start-column="95" selection-end-line="106" selection-end-column="95" />
               <folding>
                 <element signature="e#45#89#0" expanded="false" />
               </folding>
@@ -102,8 +102,8 @@
         <option value="$PROJECT_DIR$/public/js/SearchSubreddit.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/public/js/SearchController.js" />
-        <option value="$PROJECT_DIR$/public/js/SearchSubredditController.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/public/js/SearchSubredditController.js" />
       </list>
     </option>
   </component>
@@ -281,12 +281,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1487610245233</updated>
-      <workItem from="1487610246889" duration="25577000" />
+      <workItem from="1487610246889" duration="25863000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25577000" />
+    <option name="totallyTimeSpent" value="25863000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -366,21 +366,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/SearchSubredditController.js">
+    <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="62" column="53" lean-forward="false" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
-          <folding>
-            <element signature="e#45#89#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="510">
+          <caret line="41" column="64" lean-forward="true" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
+    <entry file="file://$PROJECT_DIR$/public/js/SearchSubredditController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="28" column="42" lean-forward="false" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
-          <folding />
+        <state relative-caret-position="406">
+          <caret line="106" column="95" lean-forward="false" selection-start-line="106" selection-start-column="95" selection-end-line="106" selection-end-column="95" />
+          <folding>
+            <element signature="e#45#89#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
