@@ -134,8 +134,6 @@
         }
 
 
-
-
         function getSafeHtml(selftext_html) {
             return $sce.trustAsHtml(selftext_html);
         }
